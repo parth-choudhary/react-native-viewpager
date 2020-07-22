@@ -61,6 +61,7 @@ public class ReactViewPagerManager extends ViewGroupManager<ViewPager2> {
         final ViewPager2 vp = new ViewPager2(reactContext);
         FragmentAdapter adapter = new FragmentAdapter((FragmentActivity) reactContext.getCurrentActivity());
         vp.setAdapter(adapter);
+        vp.setOffscreenPageLimit(2);
         eventDispatcher = reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher();
         vp.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override

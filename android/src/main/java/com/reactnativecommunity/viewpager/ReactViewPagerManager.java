@@ -163,6 +163,11 @@ public class ReactViewPagerManager extends ViewGroupManager<ViewPager2> {
     public void setOrientation(ViewPager2 viewPager, String value) {
         viewPager.setOrientation(value.equals("vertical") ? ViewPager2.ORIENTATION_VERTICAL : ORIENTATION_HORIZONTAL);
     }
+    
+    @ReactProp(name = "offset")
+    public void setOffscreenPageLimit(ViewPager2 viewPager, int value) {
+        viewPager.setOffscreenPageLimit(value);
+    }
 
     @ReactProp(name = "overScrollMode")
     public void setOverScrollMode(ViewPager2 viewPager, String value) {
